@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  img{
+    position: fixed;
+    top: 0; left: 0;
+    object-fit: cover;
+    z-index: -2;
+    height: 610px;
+    width: 1380px;
+  }
+  .overlay{
+    position: fixed;
+    top: 0; left: 0;
+    z-index: -1;
+    height: 610px;
+    width: 1380px;
+    background-color: rgba(0,0,0,0.6);
+  }
+  h1 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+  }
+  select{
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+    box-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+  }
+  select option{
+    color: black;
+  }
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    width: max-content;
+  }
+  .cell {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #8a2be2;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4, 0 0 30px #8a2be2;
+  }
+  .cell.disabled {
+    pointer-events: none;
+  }
+  #message {
+    color: white;
+    margin: 30px;
+    text-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+    font-size: 20px;
+  }
+  #restart {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+    box-shadow: 0 0 5px #4340f8, 0 0 5px #a369ff, 0 0 10px #8a2be2;
+    transition: transform 0.3 ease;
+  }
+  #restart:hover{
+    transform: scale(1.1);
+  }
